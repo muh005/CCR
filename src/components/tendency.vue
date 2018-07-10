@@ -6,7 +6,6 @@
 
 <script>
     import echarts from 'echarts/lib/echarts';
-    // 引入柱状图
     import 'echarts/lib/chart/bar';
     import 'echarts/lib/chart/line';
     import 'echarts/lib/component/title';
@@ -26,14 +25,14 @@
                 const option = {
                     color: colors,
                     title: {
-                        text: '走势图',
+                        text: 'tendency',
                         subtext: ''
                     },
                     tooltip: {
                         trigger: 'axis'
                     },
                     legend: {
-                        data:['新注册用户', '新增订单', '新增管理员']
+                        data:['item1', 'item2', 'item3']
                     },
                     toolbox: {
                         show: true,
@@ -54,7 +53,7 @@
                     yAxis: [
                         {
                           type: 'value',
-                          name: '用户',
+                          name: 'num',
                           min: 0,
                           max: 200,
                           position: 'left',
@@ -69,7 +68,7 @@
                         },
                         {
                           type: 'value',
-                          name: '订单',
+                          name: 'duration',
                           min: 0,
                           max: 200,
                           position: 'right',
@@ -85,38 +84,38 @@
                     ],
                     series: [
                         {
-                            name:'新注册用户',
+                            name:'item1',
                             type:'line',
                             data:this.sevenDate[0],
                             yAxisIndex: 1,
                             markPoint: {
                                 data: [
-                                    {type: 'max', name: '最大值'},
-                                    {type: 'min', name: '最小值'}
+                                    {type: 'max', name: 'maximum'},
+                                    {type: 'min', name: 'minimum'}
                                 ]
                             },
                         },
                         {
-                            name:'新增订单',
+                            name:'item2',
                             type:'line',
                             data:this.sevenDate[1],
                             yAxisIndex: 1,
                             markPoint: {
                                 data: [
-                                    {type: 'max', name: '最大值'},
-                                    {type: 'min', name: '最小值'}
+                                    {type: 'max', name: 'maximum'},
+                                    {type: 'min', name: 'minimum'}
                                 ]
                             },
                         },
                         {
-                            name:'新增管理员',
+                            name:'item3',
                             type:'line',
                             data:this.sevenDate[2],
                             yAxisIndex: 1,
                             markPoint: {
                                 data: [
-                                    {type: 'max', name: '最大值'},
-                                    {type: 'min', name: '最小值'}
+                                    {type: 'max', name: 'maximum'},
+                                    {type: 'min', name: 'minimum'}
                                 ]
                             },
                         }

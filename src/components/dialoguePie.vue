@@ -1,19 +1,18 @@
 <template>
-    <div class="visitorpie">
-        <div id="visitorpie" class="" style="width: 90%;height:450px;"></div>
+    <div class="dialoguepie">
+        <div id="dialoguepie" class="" style="width: 90%;height:450px;"></div>
     </div>
 </template>
 
 <script>
     import echarts from 'echarts/lib/echarts';
-    // 引入柱状图
     import 'echarts/lib/chart/pie';
     import 'echarts/lib/component/title';
     import 'echarts/lib/component/legend';
     
     export default {
         mounted(){
-            this.myChart = echarts.init(document.getElementById('visitorpie'));
+            this.myChart = echarts.init(document.getElementById('dialoguepie'));
             this.initData();
         },
         props: ['pieData'],
@@ -21,7 +20,7 @@
             initData(){
                 const option = {
                     title : {
-                        text: '用户分布',
+                        text: '接听状态',
                         subtext: '',
                         x:'center'
                     },
@@ -32,20 +31,15 @@
                     legend: {
                         orient: 'vertical',
                         left: 'left',
-                        data: ['北京','上海','深圳','杭州','其他']
+                        data: ['已接通','未接','拒接','关机','其他']
                     },
                     series : [
                         {
-                            name: '访问来源',
+                            name: '接通率',
                             type: 'pie',
                             radius : '55%',
                             center: ['50%', '60%'],
                             data:[
-                                {value:this.pieData.beijing, name:'北京'},
-                                {value:this.pieData.shanghai, name:'上海'},
-                                {value:this.pieData.shenzhen, name:'深圳'},
-                                {value:this.pieData.hangzhou, name:'杭州'},
-                                {value:this.pieData.qita, name:'其他'}
                             ],
                             itemStyle: {
                                 emphasis: {
@@ -71,7 +65,7 @@
 
 <style lang="less">
 	@import '../style/mixin';
-    .visitorpie{
+    .dialoguepie{
         display: flex;
         justify-content: center;
         margin-top: 20px;

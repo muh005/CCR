@@ -6,8 +6,8 @@
 					<el-menu-item index="manage">CCR</el-menu-item>
 					<el-submenu index="1">
 						<template slot="title"><i class="el-icon-document"></i>	任务管理</template>
-						<el-menu-item index="userList">销售意向</el-menu-item>
-						<el-menu-item index="shopList">断点场景</el-menu-item>
+						<el-menu-item index="task">销售意向</el-menu-item>
+						<el-menu-item index="customer">断点场景</el-menu-item>
 					</el-submenu>
 					<el-submenu index="2">
 						<template slot="title"><i class="el-icon-menu"></i>客户管理</template>

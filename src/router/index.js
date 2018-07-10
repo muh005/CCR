@@ -6,8 +6,8 @@ Vue.use(Router)
 const login = r => require.ensure([], () => r(require('@/page/login')), 'login');
 const manage = r => require.ensure([], () => r(require('@/page/manage')), 'manage');
 const home = r => require.ensure([], () => r(require('@/page/home')), 'home');
-const userList = r => require.ensure([], () => r(require('@/page/userList')), 'userList');
-const shopList = r => require.ensure([], () => r(require('@/page/shopList')), 'shopList');
+const task = r => require.ensure([], () => r(require('@/page/task')), 'task');
+const customer = r => require.ensure([], () => r(require('@/page/customer')), 'customer');
 
 const routes = [
 	{
@@ -23,13 +23,13 @@ const routes = [
 			component: home,
 			meta: [],
 		},{
-			path: '/userList',
-			component: userList,
-			meta: ['数据管理', '用户列表'],
+			path: '/task',
+			component: task,
+			meta: ['任务管理', '销售意向'],
 		},{
-			path: '/shopList',
-			component: shopList,
-			meta: ['数据管理', '商家列表'],
+			path: '/customer',
+			component: customer,
+			meta: ['任务管理', '断点场景'],
 		}]
 	}
 ]
