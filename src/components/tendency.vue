@@ -25,7 +25,7 @@
                 const option = {
                     color: colors,
                     title: {
-                        text: 'tendency',
+                        text: '',
                         subtext: ''
                     },
                     tooltip: {

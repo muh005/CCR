@@ -40,6 +40,11 @@
                             radius : '55%',
                             center: ['50%', '60%'],
                             data:[
+                                {value:this.pieData.accept, name:'已接通'},
+                                {value:this.pieData.no, name:'未接'},
+                                {value:this.pieData.reject, name:'拒接'},
+                                {value:this.pieData.off, name:'关机'},
+                                {value:this.pieData.other, name:'其他'}
                             ],
                             itemStyle: {
                                 emphasis: {
