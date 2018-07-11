@@ -12,6 +12,7 @@
     import tendency from '../components/tendency'
     import dialoguePie from '../components/dialoguePie'
     import wordCloud from '../components/wordCloud'
+    import flowChart from '../components/flowChart'
     import dtime from 'time-formater'
     export default {
         data(){
@@ -36,6 +37,7 @@
             tendency,
             dialoguePie,
             wordCloud,
+            flowChart,
     	},
         created(){
             this.initData();

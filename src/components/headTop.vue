@@ -1,10 +1,12 @@
 <template>
     <div class="header_container">
 
-		<el-breadcrumb separator="/">
+		<!--el-breadcrumb separator="/">
 			<el-breadcrumb-item :to="{ path: '/manage' }">Home</el-breadcrumb-item>
 			<el-breadcrumb-item v-for="(item, index) in $route.meta" key="index">{{item}}</el-breadcrumb-item>
-		</el-breadcrumb>
+		</el-breadcrumb-->
+			<el-input placeholder="搜索任务名称" icon="search" class="search" v-model="search" ></el-input>
+
 		<el-dropdown @command="handleCommand" menu-align='start'>
 			<img :src="baseImgPath + adminInfo.avatar" class="avator">
 			<el-dropdown-menu slot="dropdown">
@@ -70,11 +72,18 @@
 		padding-left: 20px;
 	}
 	.avator{
-		.wh(36px, 36px);
+		.wh(25px, 25px);
 		border-radius: 50%;
-		margin-right: 37px;
+		margin-right: 50px;
+		margin-left: 10px;
 	}
 	.el-dropdown-menu__item{
         text-align: center;
+    }
+    .search{
+    	top:10px;
+    	left:0px;
+    	width:1200px;
+    	height:60px
     }
 </style>

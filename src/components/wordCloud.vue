@@ -29,9 +29,9 @@
 			            type : 'wordCloud', 
 			            shape:'smooth',  
 			            gridSize : 0, 
-			            size : ['80%','90%'],
+			            size : ['80%','80%'],
 			            sizeRange : [ 30, 50 ],  
-			            rotationRange : [ 46, 80 ],
+			            rotationRange : [ 0, 45 ],
 			            textStyle : {  
 			            normal : {
 			                fontFamily:'sans-serif',
