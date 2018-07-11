@@ -3,6 +3,7 @@
         <head-top></head-top>
         <tendency :sevenDate='sevenDate' :sevenDay='sevenDay'></tendency>
         <dialogue-pie :pieData="pieData"></dialogue-pie>
+        <word-cloud></word-cloud>
     </div>
 </template>
 
@@ -10,6 +11,7 @@
     import headTop from '../components/headTop'
     import tendency from '../components/tendency'
     import dialoguePie from '../components/dialoguePie'
+    import wordCloud from '../components/wordCloud'
     import dtime from 'time-formater'
     export default {
         data(){
@@ -25,12 +27,15 @@
 
 
                 pieData:{accept: 2209, no: 1220, reject: 1402, off: 768, other: 5873},
+
+                wordData:[]
             }
         },
     	components: {
     		headTop,
-        tendency,
-        dialoguePie,
+            tendency,
+            dialoguePie,
+            wordCloud,
     	},
         created(){
             this.initData();
